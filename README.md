@@ -17,19 +17,17 @@ We use the Breast Cancer Wisconsin Diagnostic Dataset, available through sklearn
 Each instance describes characteristics of a cell nucleus derived from digitized images of a fine needle aspirate (FNA) of a breast mass.
 
 Total samples: 569
-
 Features: 30 numeric features (e.g., radius, texture, perimeter, area, smoothness, etc.)
 
 Target classes:
 
 0: Malignant (cancerous)
-
 1: Benign (non-cancerous)
 
 # Libraries Used
-scikit-learn
-numpy
-matplotlib
+- scikit-learn
+- numpy
+- matplotlib
 
 # Model Workflow
 1. Load and Explore Dataset
@@ -45,31 +43,31 @@ Train a LogisticRegression model.
 Predict class probabilities (predict_proba) on test set.
 
 4. Evaluation
-# ROC Curve
-Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
+- ROC Curve
+   -Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
 
-# Threshold Tuning
-Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
-Measure:
-- Precision
-- Recall
-- Confusion Matrix
-Tune to meet specific business or healthcare priorities (e.g., higher recall to avoid missing malignant cases).
+- Threshold Tuning
+  -Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
+  -Measure:
+    - Precision
+    - Recall
+    - Confusion Matrix
+  -Tune to meet specific business or healthcare priorities (e.g., higher recall to avoid missing malignant cases).
 
-# Probability Distribution Plot
-- Histogram showing predicted probability distribution per class.
-- Helps visually select an appropriate decision threshold.
+- Probability Distribution Plot
+  - Histogram showing predicted probability distribution per class.
+  - Helps visually select an appropriate decision threshold.
 
-# Visualizations Included
-ROC Curve
-- Displays true positive rate vs false positive rate for various thresholds.
+- Visualizations Included
+  -ROC Curve
+    - Displays true positive rate vs false positive rate for various thresholds.
 
-Probability Histogram
-- Shows distribution of predicted probabilities.
-- Helps understand how confident the model is in its predictions.
+- Probability Histogram
+  - Shows distribution of predicted probabilities.
+  - Helps understand how confident the model is in its predictions.
 
-Confusion Matrices at Tuned Thresholds
-- Display model performance for multiple manually selected thresholds.
+- Confusion Matrices at Tuned Thresholds
+  -  Display model performance for multiple manually selected thresholds.
 
 # Key Learnings
 - Logistic Regression is powerful and interpretable for binary classification tasks.
