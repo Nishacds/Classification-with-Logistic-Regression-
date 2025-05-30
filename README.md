@@ -34,17 +34,14 @@ matplotlib
 # Model Workflow
 1. Load and Explore Dataset
 Load the Breast Cancer dataset using sklearn.datasets.
-
 Check data shape, class distribution.
 
 2. Data Preprocessing
 Perform a train-test split (80% train, 20% test) with stratification to preserve class balance.
-
 Standardize features using StandardScaler.
 
 3. Logistic Regression
 Train a LogisticRegression model.
-
 Predict class probabilities (predict_proba) on test set.
 
 4. Evaluation
