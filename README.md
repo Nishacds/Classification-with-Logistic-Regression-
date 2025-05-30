@@ -2,15 +2,11 @@
 This project implements a Logistic Regression model on the Breast Cancer Wisconsin dataset to classify tumors as benign or malignant. Beyond standard model training, it explores threshold tuning for improved performance and uses visual tools like the ROC curve and probability histograms to enhance model understanding.
 
 # Project Highlights
-Binary classification using Logistic Regression
-
-Data standardization with StandardScaler
-
-Probability prediction and custom threshold tuning
-
-Evaluation using ROC curve, confusion matrix, precision, and recall
-
-Visualization of predicted probability distributions
+   - Binary classification using Logistic Regression
+   - Data standardization with StandardScaler
+   - Probability prediction and custom threshold tuning
+   - Evaluation using ROC curve, confusion matrix, precision, and recall
+   - Visualization of predicted probability distributions
 
 # Dataset
 We use the Breast Cancer Wisconsin Diagnostic Dataset, available through sklearn.datasets.
@@ -18,11 +14,9 @@ Each instance describes characteristics of a cell nucleus derived from digitized
 
 Total samples: 569
 Features: 30 numeric features (e.g., radius, texture, perimeter, area, smoothness, etc.)
-
 Target classes:
-
-0: Malignant (cancerous)
-1: Benign (non-cancerous)
+   - 0: Malignant (cancerous)
+   - 1: Benign (non-cancerous)
 
 # Libraries Used
 - scikit-learn
@@ -44,11 +38,11 @@ Predict class probabilities (predict_proba) on test set.
 
 4. Evaluation
 - ROC Curve
-   -Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
+   - Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
 
 - Threshold Tuning
-  -Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
-  -Measure:
+  - Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
+  - Measure:
     - Precision
     - Recall
     - Confusion Matrix
@@ -59,7 +53,7 @@ Predict class probabilities (predict_proba) on test set.
   - Helps visually select an appropriate decision threshold.
 
 - Visualizations Included
-  -ROC Curve
+  - ROC Curve
     - Displays true positive rate vs false positive rate for various thresholds.
 
 - Probability Histogram
