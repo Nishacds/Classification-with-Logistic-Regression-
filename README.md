@@ -12,9 +12,9 @@ This project implements a Logistic Regression model on the Breast Cancer Wiscons
 We use the Breast Cancer Wisconsin Diagnostic Dataset, available through sklearn.datasets.
 Each instance describes characteristics of a cell nucleus derived from digitized images of a fine needle aspirate (FNA) of a breast mass.
 
-Total samples: 569
-Features: 30 numeric features (e.g., radius, texture, perimeter, area, smoothness, etc.)
-Target classes:
+- Total samples: 569
+- Features: 30 numeric features (e.g., radius, texture, perimeter, area, smoothness, etc.)
+- Target classes:
    - 0: Malignant (cancerous)
    - 1: Benign (non-cancerous)
 
