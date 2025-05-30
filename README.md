@@ -1,30 +1,81 @@
-# Classification-with-Logistic-Regression
+# Breast Cancer Classification using Logistic Regression with Threshold Tuning and ROC Analysis
+This project implements a Logistic Regression model on the Breast Cancer Wisconsin dataset to classify tumors as benign or malignant. Beyond standard model training, it explores threshold tuning for improved performance and uses visual tools like the ROC curve and probability histograms to enhance model understanding.
 
-Breast Cancer Classification using Logistic Regression
-Overview
-This project aims to classify breast cancer tumors as malignant or benign using logistic regression. The dataset used for this analysis is the Breast Cancer Wisconsin (Diagnostic) dataset, which contains various features computed from digitized images of fine needle aspirates (FNA) of breast masses. The goal is to build a predictive model that can accurately distinguish between malignant and benign tumors based on these features.
+# Project Highlights
+Binary classification using Logistic Regression
 
-Dataset
-The dataset consists of 30 features, including measurements such as radius, texture, perimeter, area, and smoothness of the tumors. The target variable indicates whether a tumor is malignant (1) or benign (0).
+Data standardization with StandardScaler
 
-Methodology
--Data Loading: The dataset is loaded from a CSV file into a Pandas DataFrame for analysis.
--Data Exploration: Initial exploration of the dataset is performed to understand its structure, including the features and target variable.
--Feature Selection: Specific features are selected for model training, focusing on those that are most relevant to the classification task.
--Data Preprocessing:
-  The target variable is encoded if necessary.
-  The dataset is split into training and testing sets to evaluate model performance.
-  Features are standardized to ensure they have a mean of 0 and a standard deviation of 1.
--Model Training: A logistic regression model is trained on the training dataset.
--Model Evaluation:
-  Predictions are made on the test set.
-A confusion matrix is generated to assess the model's performance.
-Precision and recall metrics are calculated to evaluate the model's effectiveness in identifying malignant tumors.
-The ROC-AUC score is computed to measure the model's ability to distinguish between classes.
-The ROC curve is plotted to visualize the trade-off between true positive and false positive rates.
-Threshold Tuning: The classification threshold is adjusted to optimize precision and recall based on the specific needs of the application.
-Results
-The results of the model evaluation, including the confusion matrix, precision, recall, and ROC-AUC score, are presented. The ROC curve is also plotted to provide a visual representation of the model's performance.
+Probability prediction and custom threshold tuning
 
-Conclusion
-This project demonstrates the application of logistic regression for binary classification tasks in the medical domain. The findings highlight the importance of feature selection, data preprocessing, and model evaluation in building effective predictive models. Future work may include exploring other classification algorithms, hyperparameter tuning, and implementing cross-validation techniques to enhance model performance.
+Evaluation using ROC curve, confusion matrix, precision, and recall
+
+Visualization of predicted probability distributions
+
+# Dataset
+We use the Breast Cancer Wisconsin Diagnostic Dataset, available through sklearn.datasets.
+Each instance describes characteristics of a cell nucleus derived from digitized images of a fine needle aspirate (FNA) of a breast mass.
+
+Total samples: 569
+
+Features: 30 numeric features (e.g., radius, texture, perimeter, area, smoothness, etc.)
+
+Target classes:
+
+0: Malignant (cancerous)
+
+1: Benign (non-cancerous)
+
+# Libraries Used
+scikit-learn
+numpy
+matplotlib
+
+# Model Workflow
+1. Load and Explore Dataset
+Load the Breast Cancer dataset using sklearn.datasets.
+
+Check data shape, class distribution.
+
+2. Data Preprocessing
+Perform a train-test split (80% train, 20% test) with stratification to preserve class balance.
+
+Standardize features using StandardScaler.
+
+3. Logistic Regression
+Train a LogisticRegression model.
+
+Predict class probabilities (predict_proba) on test set.
+
+4. Evaluation
+✔️ ROC Curve
+Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
+
+✔️ Threshold Tuning
+Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
+Measure:
+- Precision
+- Recall
+- Confusion Matrix
+Tune to meet specific business or healthcare priorities (e.g., higher recall to avoid missing malignant cases).
+
+✔️ Probability Distribution Plot
+- Histogram showing predicted probability distribution per class.
+- Helps visually select an appropriate decision threshold.
+
+# Visualizations Included
+ROC Curve
+- Displays true positive rate vs false positive rate for various thresholds.
+
+Probability Histogram
+- Shows distribution of predicted probabilities.
+- Helps understand how confident the model is in its predictions.
+
+Confusion Matrices at Tuned Thresholds
+- Display model performance for multiple manually selected thresholds.
+
+# Key Learnings
+- Logistic Regression is powerful and interpretable for binary classification tasks.
+- Threshold tuning can drastically affect model precision and recall.
+- Visual tools like ROC curves and probability distributions aid in informed threshold selection.
+- Understanding sigmoid output is key to working with classification probabilities.
