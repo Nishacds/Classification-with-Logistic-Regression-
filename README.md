@@ -45,10 +45,10 @@ Train a LogisticRegression model.
 Predict class probabilities (predict_proba) on test set.
 
 4. Evaluation
-✔️ ROC Curve
+# ROC Curve
 Plot ROC curve using roc_curve and roc_auc_score to evaluate classification performance at all thresholds.
 
-✔️ Threshold Tuning
+# Threshold Tuning
 Use custom thresholds (e.g., 0.2, 0.3, 0.5, 0.7) instead of default 0.5 to classify based on predicted probabilities.
 Measure:
 - Precision
@@ -56,7 +56,7 @@ Measure:
 - Confusion Matrix
 Tune to meet specific business or healthcare priorities (e.g., higher recall to avoid missing malignant cases).
 
-✔️ Probability Distribution Plot
+# Probability Distribution Plot
 - Histogram showing predicted probability distribution per class.
 - Helps visually select an appropriate decision threshold.
 
